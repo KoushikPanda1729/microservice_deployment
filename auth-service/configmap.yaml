@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-service-config
+data:
+  PORT: "5501"
+  NODE_ENV: "production"
+
+  # Database Configuration (Supabase Session Pooler - IPv4)
+  DB_HOST: "aws-1-us-east-1.pooler.supabase.com"
+  DB_PORT: "5432"
+  DB_NAME: "postgres"
+  DB_USERNAME: "postgres.gliuzzkrkrifynsjeqjr"
+
+  # CORS Configuration
+  CORS_ORIGIN_ADMIN: "https://admin.yourdomain.com"
+  CORS_ORIGIN_CLIENT: "https://yourdomain.com"
+
+  # Cookie Configuration
+  COOKIE_DOMAIN: "yourdomain.com"
+
+  # JWKS Configuration (points to this service's public JWKS endpoint)
+  JWKS_URI: "http://auth-service:5501/.well-known/jwks.json"
+
+  # Admin User Configuration
+  ADMIN_EMAIL: "admin@example.com"
+  ADMIN_FIRST_NAME: "Admin"
+  ADMIN_LAST_NAME: "User"
+
+  # Public Key (safe to store in ConfigMap)
+  PUBLIC_KEY: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArlWgSzf6dDHh+wDH+0mL
+    Y9MLbdym1i2/8anq0SJEVB9AUJ8LYrcDrqGhPn1Lw4sAce62Jq69V7qT/93RKJ69
+    ZDAs2CIlo+aDuYSO+V1YIg9mHqY76py3KfHN9i5VaVgJfuHOEznRQ01IuS/koe7B
+    R6dZhvAotS0QsptbGgVRey8wofTc9dpuscQJXYQHR3fyl/IwsjYTZ7jOwYbOfdCx
+    eLuJwXJpQQEwG4vACKatk8Hh9j6dgJNwX7OV+/+oOFmmzC855NDAgYbnq0Sf9jYn
+    o4bzvT0CsXvuKfpxgjBFPvSc4NRlWQBkny7L3IPwkENYL72/HXG/qj3bYpuFro65
+    rQIDAQAB
+    -----END PUBLIC KEY-----

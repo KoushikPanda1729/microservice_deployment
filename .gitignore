@@ -1,0 +1,13 @@
+# Secrets - Never commit!
+secret.yaml
+*-secret.yaml
+*.secret.yaml
+
+# Environment files
+.env
+.env.*
+
+# Editor
+.DS_Store
+.idea/
+.vscode/
