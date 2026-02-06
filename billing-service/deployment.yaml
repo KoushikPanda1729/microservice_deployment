@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: billing-service
-          image: koushik172/billing-service:build-6
+          image: koushik172/billing-service:build-8
           ports:
             - containerPort: 5503
           envFrom:
