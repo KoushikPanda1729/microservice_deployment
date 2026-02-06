@@ -17,7 +17,7 @@ data:
   CORS_ORIGIN_CLIENT: "https://yourdomain.com"
 
   # Cookie Configuration
-  COOKIE_DOMAIN: "yourdomain.com"
+  COOKIE_DOMAIN: ""
 
   # JWKS Configuration (points to this service's public JWKS endpoint)
   JWKS_URI: "http://auth-service:5501/.well-known/jwks.json"
