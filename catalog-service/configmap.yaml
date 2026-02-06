@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalog-service-config
+data:
+  NODE_ENV: "production"
+  SERVER_PORT: "5502"
+  SERVER_HOST: "0.0.0.0"
+  JWKS_URI: "http://auth-service:5501/.well-known/jwks.json"
+  AWS_S3_REGION: "eu-north-1"
+  AWS_S3_BUCKET: "catalog-service-product"
+  STORAGE_PROVIDER: "s3"
+  BROKER_TYPE: "kafka"
+  KAFKA_CLIENT_ID: "catalog-service"
+  KAFKA_BROKERS: "pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"
+  KAFKA_SSL: "true"
+  KAFKA_SASL_MECHANISM: "plain"
+  CORS_ORIGIN: "https://admin.yourdomain.com,https://yourdomain.com"
+  CORS_CREDENTIALS: "true"

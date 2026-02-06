@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-service
+  labels:
+    app: catalog-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: catalog-service
+  template:
+    metadata:
+      labels:
+        app: catalog-service
+    spec:
+      containers:
+        - name: catalog-service
+          image: koushik172/catalog-service:build-6
+          ports:
+            - containerPort: 5502
+          envFrom:
+            - configMapRef:
+                name: catalog-service-config
+            - secretRef:
+                name: catalog-service-secret
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog-service
+spec:
+  selector:
+    app: catalog-service
+  ports:
+    - protocol: TCP
+      port: 5502
+      targetPort: 5502
