@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: billing-service-config
+data:
+  PORT: "5503"
+  HOST: "0.0.0.0"
+  NODE_ENV: "production"
+
+  # Auth Service URL (for JWT verification)
+  JWKS_URI: "http://auth-service:5501/.well-known/jwks.json"
+
+  # Broker Configuration
+  BROKER_TYPE: "kafka"
+
+  # Kafka Configuration
+  KAFKA_BROKERS: "pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"
+  KAFKA_CLIENT_ID: "billing-service"
+  KAFKA_SSL: "true"
+  KAFKA_SASL_MECHANISM: "plain"
+
+  # CORS Configuration
+  CORS_ORIGIN: "*"
+
+  # Payment Configuration
+  PAYMENT_GATEWAY: "stripe"
+  STRIPE_SUCCESS_URL: "http://localhost:3001/payment/success"
+  STRIPE_CANCEL_URL: "http://localhost:3001/payment/cancel"
