@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: notification-service-config
+data:
+  PORT: "5504"
+  NODE_ENV: "development"
+
+  # MongoDB Configuration
+  MONGO_DB_NAME: "notification_db"
+
+  # CORS Configuration
+  CORS_ORIGIN_ADMIN: "https://admin.yourdomain.com"
+  CORS_ORIGIN_CLIENT: "https://yourdomain.com"
+
+  # Auth Service URL (for JWT verification)
+  AUTH_SERVICE_URL: "http://auth-service:5501"
+  JWKS_URI: "http://auth-service:5501/.well-known/jwks.json"
+
+  # Email Configuration
+  SMTP_HOST: "smtp.example.com"
+  SMTP_PORT: "587"
+  SMTP_FROM: "noreply@yourdomain.com"
+
+  # Push Notification Configuration
+  PUSH_ENABLED: "true"
+
+  # Kafka Configuration
+  KAFKA_BROKER: "pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"
+  KAFKA_CLIENT_ID: "notification-service"
+  KAFKA_GROUP_ID: "notification-service-group"
+  
+  # Frontend URL Configuration
+  FRONTEND_URL: "http://localhost:3001"
+  FRONTEND_ORDER_PATH: "/orders"
+  
+  # Notification Provider Configuration
+  NOTIFICATION_EMAIL_PROVIDER: "nodemailer"
+  NOTIFICATION_SMS_PROVIDER: "twilio"
+  NOTIFICATION_PUSH_PROVIDER: "firebase"
+  
+  # Node-config custom environment variables (override YAML config)
+  # Format: CUSTOM_ENV_VARIABLES='{"kafka":{"broker":"pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"}}'
+  kafka__broker: "pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"
+  kafka__clientId: "notification-service"
