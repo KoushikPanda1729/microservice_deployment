@@ -10,17 +10,18 @@ data:
   MONGO_DB_NAME: "notification_db"
 
   # CORS Configuration
-  CORS_ORIGIN_ADMIN: "https://admin.yourdomain.com"
-  CORS_ORIGIN_CLIENT: "https://yourdomain.com"
+
+  CORS_ORIGIN_ADMIN: "https://admin.koushikpanda.online"
+  CORS_ORIGIN_CLIENT: "https://pizza.koushikpanda.online"
 
   # Auth Service URL (for JWT verification)
   AUTH_SERVICE_URL: "http://auth-service:5501"
   JWKS_URI: "http://auth-service:5501/.well-known/jwks.json"
 
   # Email Configuration
-  SMTP_HOST: "smtp.example.com"
-  SMTP_PORT: "587"
-  SMTP_FROM: "noreply@yourdomain.com"
+  SMTP_HOST: "smtp.resend.com"
+  SMTP_PORT: "465"
+  SMTP_FROM: "noreply@koushikpanda.online"
 
   # Push Notification Configuration
   PUSH_ENABLED: "true"
