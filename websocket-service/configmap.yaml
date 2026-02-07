@@ -14,7 +14,7 @@ data:
   REDIS_PORT: "6379"
 
   # CORS Configuration
-  CORS_ORIGIN: "*"
+  CORS_ORIGIN: "https://admin.koushikpanda.online,https://pizza.koushikpanda.online"
 
   # Auth Service URL (for JWT verification)
   AUTH_SERVICE_URL: "http://auth-service:5501"
