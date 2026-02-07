@@ -20,9 +20,9 @@ data:
   KAFKA_SASL_MECHANISM: "plain"
 
   # CORS Configuration
-  CORS_ORIGIN: "*"
+  CORS_ORIGIN: "https://admin.koushikpanda.online,https://pizza.koushikpanda.online"
 
   # Payment Configuration
   PAYMENT_GATEWAY: "stripe"
-  STRIPE_SUCCESS_URL: "http://localhost:3001/payment/success"
-  STRIPE_CANCEL_URL: "http://localhost:3001/payment/cancel"
+  STRIPE_SUCCESS_URL: "https://pizza.koushikpanda.online/payment/success"
+  STRIPE_CANCEL_URL: "https://pizza.koushikpanda.online/payment/cancel"
