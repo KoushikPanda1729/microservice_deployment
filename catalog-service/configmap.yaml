@@ -15,5 +15,5 @@ data:
   KAFKA_BROKERS: "pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"
   KAFKA_SSL: "true"
   KAFKA_SASL_MECHANISM: "plain"
-  CORS_ORIGIN: "https://admin.yourdomain.com,https://yourdomain.com"
+  CORS_ORIGIN: "https://admin.koushikpanda.online,https://pizza.koushikpanda.online"
   CORS_CREDENTIALS: "true"
