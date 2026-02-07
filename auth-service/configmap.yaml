@@ -13,11 +13,11 @@ data:
   DB_USERNAME: "postgres.gliuzzkrkrifynsjeqjr"
 
   # CORS Configuration
-  CORS_ORIGIN_ADMIN: "https://admin.yourdomain.com"
-  CORS_ORIGIN_CLIENT: "https://yourdomain.com"
+  CORS_ORIGIN_ADMIN: "https://admin.koushikpanda.online"
+  CORS_ORIGIN_CLIENT: "https://pizza.koushikpanda.online"
 
   # Cookie Configuration
-  COOKIE_DOMAIN: ""
+  COOKIE_DOMAIN: "koushikpanda.online"
 
   # JWKS Configuration (points to this service's public JWKS endpoint)
   JWKS_URI: "http://auth-service:5501/.well-known/jwks.json"
