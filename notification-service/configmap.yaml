@@ -4,7 +4,7 @@ metadata:
   name: notification-service-config
 data:
   PORT: "5504"
-  NODE_ENV: "development"
+  NODE_ENV: "production"
 
   # MongoDB Configuration
   MONGO_DB_NAME: "notification_db"
@@ -32,7 +32,7 @@ data:
   KAFKA_GROUP_ID: "notification-service-group"
   
   # Frontend URL Configuration
-  FRONTEND_URL: "http://localhost:3001"
+  FRONTEND_URL: "https://pizza.koushikpanda.online"
   FRONTEND_ORDER_PATH: "/orders"
   
   # Notification Provider Configuration
