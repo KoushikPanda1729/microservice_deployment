@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: notification-service
-          image: koushik172/notification-service:build-8
+          image: koushik172/notification-service:build-9
           ports:
             - containerPort: 5504
           envFrom:
