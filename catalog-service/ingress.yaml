@@ -5,6 +5,9 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
 
+    # Body Size (for image uploads)
+    nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+
     # CORS Configuration
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "https://admin.koushikpanda.online,https://pizza.koushikpanda.online"
