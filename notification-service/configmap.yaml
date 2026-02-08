@@ -10,7 +10,6 @@ data:
   MONGO_DB_NAME: "notification_db"
 
   # CORS Configuration
-
   CORS_ORIGIN_ADMIN: "https://admin.koushikpanda.online"
   CORS_ORIGIN_CLIENT: "https://pizza.koushikpanda.online"
 
@@ -21,26 +20,23 @@ data:
   # Email Configuration
   SMTP_HOST: "smtp.resend.com"
   SMTP_PORT: "465"
+  SMTP_SECURE: "true"
   SMTP_FROM: "noreply@koushikpanda.online"
-
-  # Push Notification Configuration
-  PUSH_ENABLED: "true"
 
   # Kafka Configuration
   KAFKA_BROKER: "pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"
   KAFKA_CLIENT_ID: "notification-service"
   KAFKA_GROUP_ID: "notification-service-group"
-  
+  KAFKA_SASL_MECHANISM: "plain"
+
   # Frontend URL Configuration
   FRONTEND_URL: "https://pizza.koushikpanda.online"
   FRONTEND_ORDER_PATH: "/orders"
-  
+
   # Notification Provider Configuration
   NOTIFICATION_EMAIL_PROVIDER: "nodemailer"
   NOTIFICATION_SMS_PROVIDER: "twilio"
   NOTIFICATION_PUSH_PROVIDER: "firebase"
-  
-  # Node-config custom environment variables (override YAML config)
-  # Format: CUSTOM_ENV_VARIABLES='{"kafka":{"broker":"pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"}}'
-  kafka__broker: "pkc-oxqxx9.us-east-1.aws.confluent.cloud:9092"
-  kafka__clientId: "notification-service"
+
+  # Logging
+  LOG_SILENT: "false"
